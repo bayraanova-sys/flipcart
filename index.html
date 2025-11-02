@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3x3 Flip Cards</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f0f0f0;
+    font-family: Arial, sans-serif;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-gap: 20px;
+  }
+  .flip-card {
+    background-color: transparent;
+    perspective: 1000px;
+  }
+  .flip-card-inner {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: #fff;
+  }
+  .flip-card-front {
+    background-color: #2980b9;
+  }
+  .flip-card-back {
+    background-color: #e74c3c;
+    transform: rotateY(180deg);
+  }
+</style>
+</head>
+<body>
+  <div class="grid">
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">1</div>
+        <div class="flip-card-back">A</div>
+      </div>
+    </div>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">2</div>
+        <div class="flip-card-back">B</div>
+      </div>
+    </div>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">3</div>
+        <div class="flip-card-back">C</div>
+      </div>
+    </div>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">4</div>
+        <div class="flip-card-back">D</div>
+      </div>
+    </div>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">5</div>
+        <div class="flip-card-back">E</div>
+      </div>
+    </div>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">6</div>
+        <div class="flip-card-back">F</div>
+      </div>
+    </div>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">7</div>
+        <div class="flip-card-back">G</div>
+      </div>
+    </div>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">8</div>
+        <div class="flip-card-back">H</div>
+      </div>
+    </div>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">9</div>
+        <div class="flip-card-back">I</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
